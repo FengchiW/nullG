@@ -1,5 +1,10 @@
 package nullG;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 class Stage{
 	public char[][] matrix;
@@ -12,10 +17,48 @@ class Stage{
 			graphics.writeString(writeArray[r],0,r);
 		}
 	}
-	public Stage(nullG.NullG game, int inWidth, int inHeight, char fill){
-	    graphics = game.graphics;
-		width  = inWidth;
-		height = inHeight;
+	public void loadFile(String filename){
+		BufferedReader br = null;
+		FileReader fr = null;
+		List<String> tempL = new ArrayList<String>();
+		// file reading
+		try {
+			fr = new FileReader(filename);
+			br = new BufferedReader(fr);
+			String sCurrentLine;
+
+			while ((sCurrentLine = br.readLine()) != null) {
+				tempL.add(sCurrentLine);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+				if (fr != null)
+					fr.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		// processing of the data
+		writeArray = new String[tempL.size()];
+		for(int i=0;i<tempL.size();i++){
+			writeArray[i] = tempL.get(i);
+		}
+		matrix = new char[writeArray[0].length()][writeArray.length];
+		for(int r=0;r<writeArray.length;r++){
+			for(int c=0;c<writeArray[r].length();c++){
+				matrix[c][r] = writeArray[r].charAt(c);
+			}
+		}
+		height = writeArray.length;
+		width = matrix.length;
+	}
+	public void autoGen(int _width, int _height, char fill){
+		width  = _width;
+		height = _height;
 		matrix = new char[width][height];
 		for(int  x=0;x<width;x++){
 			for(int y=0;y<height;y++){
@@ -37,6 +80,9 @@ class Stage{
 		for(int r=0;r<height;r++){
 			writeArray[r] = String.join("",rcMatrix[r]);
 		}
+	}
+	public Stage(nullG.NullG game){
+	    graphics = game.graphics;
 	}
 	public char getChar(int x, int y){
 		return matrix[x][y];

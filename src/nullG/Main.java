@@ -48,7 +48,9 @@ class NullG{
 		//graphics.setColor(ConsoleColors.ForeGround.GREEN_BRIGHT,ConsoleColors.Background.BLACK);
 		
 		// set stage
-		currentStage = new Stage(this,graphics.getWidth(),graphics.getHeight(),' ');
+		currentStage = new Stage(this);
+		//currentStage.autoGen(graphics.getWidth(),graphics.getHeight(),' ');
+		currentStage.loadFile("./nullGData/home.stage");
 		currentStage.writeStage();
 		player.render();
 		
