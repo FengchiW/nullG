@@ -1,3 +1,0 @@
-download the jar from the JNA source (on github, just google it), and use
-jar -xf <JARFILE> to extract its contents. Place these contents in your classes directory. 
-You should then be good
