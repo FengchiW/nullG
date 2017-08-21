@@ -4,12 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 class NullG{
-	// settings
-	private static final int charUP    = 119;
-	private static final int charDOWN  = 115;
-	private static final int charLEFT  = 97 ;
-	private static final int charRIGHT = 100;
-	private static final int charEXIT  = 3  ;
 	// constants
 	public static final int tickTime  = 20;
 	private static final int movementDelayX = 20;
@@ -39,12 +33,13 @@ class NullG{
 		// use jansi for cross platform escape code support!
 		utils = new Utils(this);
 		graphics = new Graphics(this,width,height);
-		player = new Player(this,0,0,'Z');
+		player = new Player(this,0,0,Defaults.playerChar);
 		events = new Events(this);
 	}
 	public void run(){
 		// initialize graphics
 		graphics.calibrate();
+		//graphics.writeString(ConsoleColors.numToString[1],-10,-10);
 		//graphics.setColor(ConsoleColors.ForeGround.GREEN_BRIGHT,ConsoleColors.Background.BLACK);
 		
 		// set stage
@@ -70,19 +65,19 @@ class NullG{
 			if(kz.size() > 0){
 				int c = kz.get(0);
 				switch (c){
-					case charEXIT:
+					case Defaults.charEXIT:
 						stop();
 						break;
-					case charUP:
+					case Defaults.charUP:
 						yOffset = -1;
 						break;
-					case charDOWN:
+					case Defaults.charDOWN:
 						yOffset = 1;
 						break;
-					case charLEFT:
+					case Defaults.charLEFT:
 						xOffset = -1;
 						break;
-					case charRIGHT:
+					case Defaults.charRIGHT:
 						xOffset = 1;
 						break;
 					default:

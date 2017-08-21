@@ -64,7 +64,7 @@ class Stage{
 			for(int y=0;y<height;y++){
 				char z = fill;
 				if(y==height-1 || x==width-1 || y==0 || x==0){
-					z = '#';
+					z = ' ';
 				}
 				matrix[x][y] = z;
 			}
