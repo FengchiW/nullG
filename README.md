@@ -1,10 +1,11 @@
-### NullG ###
+# NullG #
 
 ## Brief Description ##
 
 This is a game made by Calder White, A windows build adapted by Wilson F. Wang <br>
-Please Note, I Don't claim ownership nor credit for the idea and code, I merely <br>
+Please Note, I Don't claim ownership nor credit for the idea and code, I merely am <br>
 continuing the project for a learning experience. <br>
+<br>
 Also, Please if you enjoyed the adaptation, give the original developer a thanks for the idea.
 
 ## How to play ##
@@ -13,13 +14,13 @@ Also, Please if you enjoyed the adaptation, give the original developer a thanks
 
 Note there are requirements to run the game!
 
-# Windows (Adapted Version)#
+### Windows (Adapted Version) ###
 
 Download the Windows Build path as a zip file <br>
 You will find an exe file name Game <br>
 Run the ".exe" file.
 
-# Linux and Windows (Non adapted) #
+### Linux and Windows (Non adapted) ###
 
 Download The Non-adapted path as a zip file <br>
 Then simply run startgame.sh (Linux) or startgame.bat (Windows)
