@@ -6,7 +6,9 @@ This is a game made by Calder White, A windows build adapted by Wilson F. Wang <
 Please Note, I Don't claim ownership nor credit for the idea and code, I merely am <br>
 continuing the project for a learning experience. <br>
 <br>
-Also, Please if you enjoyed the adaptation, give the original developer a thanks for the idea.
+
+Also, Please if you enjoyed the adaptation, give the original developer a thanks for the idea.<br>
+Here is a link to the orginal code and copy https://github.com/CalderWhite/nullG
 
 ## How to play ##
 
