@@ -3,7 +3,7 @@
 ## Brief Description ##
 
 This is a game made by Calder White, A windows build adapted by Wilson F. Wang <br>
-Please Note, I Don't claim ownership nor credit for the idea and code, I merely am <br>
+Please Note, I do not claim ownership nor credit for the idea and code, I merely am <br>
 continuing the project for a learning experience. <br>
 <br>
 
@@ -12,19 +12,26 @@ Here is a link to the orginal code and copy https://github.com/CalderWhite/nullG
 
 ## How to play ##
 
+A tutorial will be posted on the wiki page for Nullg.
+
 ## Setup ##
 
 Note there are requirements to run the game!
 
 ### Windows (Adapted Version) ###
 
-Download the Windows Build path as a zip file <br>
-You will find an exe file name Game <br>
+Download the latest Windows patch as a zip file this will be under patch-# branch<br>
+You will find an exe file name "Nullg.exe" <br>
 Run the ".exe" file.
+
+### Linux (Adapted Version) ###
+
+Currently I will not be working on a linux patch. <br>
+However, It may be a possibility if the game turns out well.
 
 ### Linux and Windows (Non adapted) ###
 
-Download The Non-adapted path as a zip file <br>
+Download The Non-adapted patch from master branch as a zip file <br>
 Then simply run startgame.sh (Linux) or startgame.bat (Windows)
 
 ## Bugs? ##
